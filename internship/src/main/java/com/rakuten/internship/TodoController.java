@@ -30,7 +30,7 @@ public class TodoController {
     }
 
     @PostMapping("/create")
-    public String createTodo(@ModelAttribute Todo todo) {
+    public String createTodo(@ModelAttribute final Todo todo) {
         // TODO 必要なコードを作成してください。
         return null;
     }
