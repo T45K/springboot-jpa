@@ -20,9 +20,8 @@ public class TodoController {
     // TODO 必要なメンバーを宣言してください。
 
     @GetMapping("/")
-    public String home(Model model) {
-        // TODO 必要なコードを作成してください。
-        return null;
+    public String home(final Model model) {
+        return "home";
     }
 
     @GetMapping("/create")
