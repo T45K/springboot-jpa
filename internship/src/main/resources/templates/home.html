@@ -1,0 +1,25 @@
+<html>
+  <title>Summer Short Internship 2019</title>
+  <script type="text/javascript">
+  // TODO ボタンを制御するためのJSコードを作成してください。
+  </script>
+  <body>
+    <h1>
+      Todo Management System
+    </h1>
+    <h4>2019 Summer Interhship Pre-task</h4>
+    
+    <table border="1" width="500" cellspacing="0" cellpadding="5" bordercolor="#333333">
+        <tr>
+        <th bgcolor="#EE0000"><font color="#FFFFFF">No</font></th>
+        <th bgcolor="#EE0000" width="150"><font color="#FFFFFF">Title</font></th>
+        <th bgcolor="#EE0000" width="200"><font color="#FFFFFF">Description</font></th>
+        </tr>
+        <tr th:each="todo:${todos}">
+          <!-- TODO データを出力するためのコードを作成してください。 -->
+        </tr>
+    </table>
+    <br>
+    <button id="btn" value="Click">Go to the form</button>
+  </body>
+</html>
