@@ -1,9 +1,46 @@
 package com.rakuten.internship.entity;
 
-/**
- * このクラスは、タスク管理の対象となるTodoのエンティティーです。
- * エンティティーとして使えるように、コードを記入してください。
- */
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class Todo {
-    // TODO 必要なコードを記入してください。
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "Number")
+    private int number;
+
+    @Column(name = "Title", nullable = false)
+    private String title;
+
+    @Column(name = "Description")
+    private String description;
+
+    public int getNumber() {
+        return number;
+    }
+
+    public void setNumber(final int number) {
+        this.number = number;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(final String title) {
+        this.title = title;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(final String description) {
+        this.description = description;
+    }
 }
