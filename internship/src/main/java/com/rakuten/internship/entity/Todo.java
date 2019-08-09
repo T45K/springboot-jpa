@@ -11,7 +11,7 @@ public class Todo {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "Number")
+    @Column(name = "No")
     private int number;
 
     @Column(name = "Title", nullable = false)
