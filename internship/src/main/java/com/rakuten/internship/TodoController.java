@@ -26,8 +26,7 @@ public class TodoController {
 
     @GetMapping("/create")
     public String create() {
-        // TODO 必要なコードを作成してください。
-        return null;
+        return "create";
     }
 
     @PostMapping("/create")
