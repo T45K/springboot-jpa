@@ -53,7 +53,11 @@ public class TodoController {
 
     @PostMapping("/create")
     public String createTodo(@ModelAttribute final Todo todo) {
+        if (todo.getTitle().isEmpty()) {
+            return "error";
+        }
+
         repository.saveAndFlush(todo);
-        return null;
+        return "complete";
     }
 }
