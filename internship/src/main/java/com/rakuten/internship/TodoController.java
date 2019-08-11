@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import javax.annotation.PostConstruct;
 import java.util.List;
 
 /**
@@ -21,6 +22,21 @@ public class TodoController {
 
     public TodoController(final TodoRepository repository) {
         this.repository = repository;
+    }
+
+    @PostConstruct
+    public void saveDummyData() {
+        repository.saveAndFlush(createTodo("111", "111"));
+        repository.saveAndFlush(createTodo("222", "222"));
+        repository.saveAndFlush(createTodo("222", "222"));
+        repository.saveAndFlush(createTodo("aaa", "bbb"));
+    }
+
+    private Todo createTodo(final String title, final String description) {
+        final Todo todo = new Todo();
+        todo.setTitle(title);
+        todo.setDescription(description);
+        return todo;
     }
 
     @GetMapping("/")
