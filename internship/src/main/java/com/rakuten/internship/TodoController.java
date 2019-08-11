@@ -18,8 +18,11 @@ import java.util.List;
 @Controller
 public class TodoController {
 
-    @Autowired
-    private TodoRepository repository;
+    private final TodoRepository repository;
+
+    public TodoController(final TodoRepository repository) {
+        this.repository = repository;
+    }
 
     @GetMapping("/")
     public String home(final Model model) {
