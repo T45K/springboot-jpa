@@ -15,8 +15,10 @@
         <th bgcolor="#EE0000" width="150"><font color="#FFFFFF">Title</font></th>
         <th bgcolor="#EE0000" width="200"><font color="#FFFFFF">Description</font></th>
     </tr>
-    <tr th:each="todo:${todos}">
-        <!-- TODO データを出力するためのコードを作成してください。 -->
+    <tr th:each="todo:${todoList}">
+        <td th:text="${todo.number}"></td>
+        <td th:text="${todo.title}"></td>
+        <td th:text="${todo.description}"></td>
     </tr>
 </table>
 <br>
