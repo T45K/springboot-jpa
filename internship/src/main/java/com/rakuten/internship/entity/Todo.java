@@ -12,7 +12,7 @@ public class Todo {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "No")
-    private int number;
+    private long number;
 
     @Column(name = "Title", nullable = false)
     private String title;
@@ -20,7 +20,7 @@ public class Todo {
     @Column(name = "Description")
     private String description;
 
-    public int getNumber() {
+    public long getNumber() {
         return number;
     }
 
