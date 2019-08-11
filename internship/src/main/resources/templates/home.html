@@ -1,5 +1,6 @@
 <html xmlns:th="http://www.w3.org/1999/xhtml" lang="ja">
 <title>Summer Short Internship 2019</title>
+<link rel="stylesheet" type="text/css" href="table.css">
 <script type="text/javascript">
     // TODO ボタンを制御するためのJSコードを作成してください。
 </script>
@@ -9,16 +10,17 @@
 </h1>
 <h4>2019 Summer Internship Pre-task</h4>
 
-<table border="1" width="500" cellspacing="0" cellpadding="5" bordercolor="#333333">
+<!--<table border="1" width="500" cellspacing="0" cellpadding="5" bordercolor="#333333">-->
+<table class="home">
     <tr>
-        <th style="background-color: #EE0000"><span style="color: #FFFFFF">No</span></th>
-        <th style="background-color: #EE0000;width:150px"><span style="color: #FFFFFF">Title</span></th>
-        <th style="background-color: #EE0000;width:200px"><span style="color: #FFFFFF">Description</span></th>
+        <th class="number"><span style="color: #FFFFFF">No</span></th>
+        <th class="title"><span style="color: #FFFFFF">Title</span></th>
+        <th class="description"><span style="color: #FFFFFF">Description</span></th>
     </tr>
     <tr th:each="todo:${todoList}">
-        <td th:text="${todo.number}"></td>
-        <td th:text="${todo.title}"></td>
-        <td th:text="${todo.description}"></td>
+        <td class="number" th:text="${todo.number}"></td>
+        <td class="title" th:text="${todo.title}"></td>
+        <td class="description" th:text="${todo.description}"></td>
     </tr>
 </table>
 <br>
