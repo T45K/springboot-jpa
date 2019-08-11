@@ -1,6 +1,8 @@
 package com.rakuten.internship;
 
 import com.rakuten.internship.entity.Todo;
+import com.rakuten.internship.repository.TodoRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,11 +18,12 @@ import java.util.List;
 @Controller
 public class TodoController {
 
-    // TODO 必要なメンバーを宣言してください。
+    @Autowired
+    private TodoRepository repository;
 
     @GetMapping("/")
     public String home(final Model model) {
-        final List<Todo> todoList = loadTodoListFromDB();
+        final List<Todo> todoList = repository.findAll();
         model.addAttribute("todoList", todoList);
         return "home";
     }
@@ -33,10 +36,6 @@ public class TodoController {
     @PostMapping("/create")
     public String createTodo(@ModelAttribute final Todo todo) {
         // TODO 必要なコードを作成してください。
-        return null;
-    }
-
-    private List<Todo> loadTodoListFromDB() {
         return null;
     }
 }
