@@ -2,6 +2,8 @@ package com.rakuten.internship;
 
 import com.rakuten.internship.entity.Todo;
 import com.rakuten.internship.repository.TodoRepository;
+import com.rakuten.internship.service.TodoService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,18 +20,18 @@ import java.util.List;
 @Controller
 public class TodoController {
 
-    private final TodoRepository repository;
+    private final TodoService service;
 
-    public TodoController(final TodoRepository repository) {
-        this.repository = repository;
+    public TodoController(final TodoService service) {
+        this.service = service;
     }
 
     @PostConstruct
     public void saveDummyData() {
-        repository.saveAndFlush(createTodo("111", "111"));
-        repository.saveAndFlush(createTodo("222", "222"));
-        repository.saveAndFlush(createTodo("222", "222"));
-        repository.saveAndFlush(createTodo("aaa", "bbb"));
+        service.save(createTodo("111", "111"));
+        service.save(createTodo("222", "222"));
+        service.save(createTodo("222", "222"));
+        service.save(createTodo("aaa", "bbb"));
     }
 
     private Todo createTodo(final String title, final String description) {
@@ -41,7 +43,7 @@ public class TodoController {
 
     @GetMapping("/")
     public String home(final Model model) {
-        final List<Todo> todoList = repository.findAll();
+        final List<Todo> todoList = service.findTodoList();
         model.addAttribute("todoList", todoList);
         return "home";
     }
@@ -52,12 +54,12 @@ public class TodoController {
     }
 
     @PostMapping("/create")
-    public String createTodo(@ModelAttribute final Todo todo) {
+    public String saveTodo(@ModelAttribute final Todo todo) {
         if (todo.getTitle().isEmpty()) {
             return "error";
         }
 
-        repository.saveAndFlush(todo);
+        service.save(todo);
         return "complete";
     }
 }
