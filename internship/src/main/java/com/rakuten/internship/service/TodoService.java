@@ -15,7 +15,7 @@ public class TodoService {
 
     // TODO 必要なメンバーを宣言してください。
 
-    public List<Todo> findTodos(){
+    public List<Todo> findTodoList(){
         // TODO 必要なコードを作成してください。
         return null;
     }
