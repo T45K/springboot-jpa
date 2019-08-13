@@ -1,5 +1,6 @@
-<html lang="ja">
+<html xmlns:th="http://www.w3.org/1999/xhtml" lang="ja">
 <title>Summer Short Internship 2019</title>
+<link rel="stylesheet" type="text/css" href="/css/table.css" th:href="@{/css/table.css}">
 <body>
 <h1>
     Todo Management System
@@ -7,18 +8,18 @@
 <h4>2019 Summer Internship Pre-task</h4>
 
 <form method="post">
-    <table border="1" width="500" cellspacing="0" cellpadding="5" bordercolor="#333333">
+    <table>
         <tr>
-            <th bgcolor="#EE0000" width="150"><span style="color: #FFFFFF; ">Title</span></th>
-            <th bgcolor="#EE0000" width="200"><span style="color: #FFFFFF; ">Description</span></th>
+            <th class="title"><span style="color: #FFFFFF; ">Title</span></th>
+            <th class="description"><span style="color: #FFFFFF; ">Description</span></th>
         </tr>
         <tr>
-            <td bgcolor="#FFFFFF" valign="top" width="150">
+            <td class="title">
                 <label>
                     <input type="text" placeholder="課題のタイトルを入力してください" name="title"/>
                 </label>
             </td>
-            <td bgcolor="#FFFFFF" valign="top" width="200">
+            <td class="description">
                 <label>
                     <input type="text" placeholder="課題の詳細を入力してください" name="description"/>
                 </label>
