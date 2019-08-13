@@ -20,7 +20,7 @@
         <th class="description"><span style="color: #FFFFFF">Description</span></th>
     </tr>
     <tr th:each="todo:${todoList}">
-        <td class="number" th:text="${todo.number}"></td>
+        <td th:text="${todo.number}"></td>
         <td class="title" th:text="${todo.title}"></td>
         <td class="description" th:text="${todo.description}"></td>
     </tr>

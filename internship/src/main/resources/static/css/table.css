@@ -1,49 +1,31 @@
-table.home {
-    border: solid 1px #333333;
+table,th,td{
+    border: solid 2px #333333;
     border-collapse: collapse;
     padding: 5px;
+}
+
+table.home {
     width: 500px;
 }
 
 th.number {
     background-color: #EE0000;
-    border: double 1px #333333;
-    border-collapse: collapse;
-    padding: 5px;
 }
 
 th.title {
     background-color: #EE0000;
-    border: double 1px #333333;
-    border-collapse: collapse;
-    padding: 5px;
     width: 150px;
 }
 
 th.description {
     background-color: #EE0000;
-    border: double 1px #333333;
-    border-collapse: collapse;
-    padding: 5px;
     width: 200px;
 }
 
-td.number {
-    border: double 1px #333333;
-    border-collapse: collapse;
-    padding: 5px;
-}
-
 td.title {
-    border: double 1px #333333;
-    border-collapse: collapse;
-    padding: 5px;
     width: 150px;
 }
 
 td.description {
-    border: double 1px #333333;
-    border-collapse: collapse;
-    padding: 5px;
     width: 200px;
 }
