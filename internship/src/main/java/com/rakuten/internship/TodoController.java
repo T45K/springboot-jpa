@@ -1,9 +1,7 @@
 package com.rakuten.internship;
 
 import com.rakuten.internship.entity.Todo;
-import com.rakuten.internship.repository.TodoRepository;
 import com.rakuten.internship.service.TodoService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
