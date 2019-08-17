@@ -22,4 +22,7 @@ public class Todo {
 
     @Column(name = "Description")
     private String description;
+
+    @Column(name = "Deadline")
+    private String deadline;
 }

@@ -58,6 +58,10 @@ public class TodoController {
             return "error";
         }
 
+        if (!todo.getDeadline().isEmpty()) {
+            todo.setDeadline(todo.getDeadline().replace('T', ' '));
+        }
+
         service.save(todo);
         return "complete";
     }
