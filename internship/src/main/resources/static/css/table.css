@@ -5,29 +5,23 @@ table, th, td {
 }
 
 table {
-    width: 500px;
+    width: 800px;
 }
 
-th.number {
+th {
     background-color: #EE0000;
 }
 
 th.title {
-    background-color: #EE0000;
     width: 150px;
 }
 
 th.description {
-    background-color: #EE0000;
     width: 200px;
 }
 
-td.title {
-    width: 150px;
-}
-
-td.description {
-    width: 200px;
+th.deadline {
+    width: 400px;
 }
 
 td.delete {
