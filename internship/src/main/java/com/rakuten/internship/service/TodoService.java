@@ -24,8 +24,11 @@ public class TodoService {
         return repository.findAll();
     }
 
-    public Todo save(final Todo todo) {
+    public void save(final Todo todo) {
         repository.save(todo);
-        return todo;
+    }
+
+    public void delete(final long key) {
+        repository.deleteById(key);
     }
 }
