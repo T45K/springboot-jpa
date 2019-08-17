@@ -29,3 +29,7 @@ td.title {
 td.description {
     width: 200px;
 }
+
+td.delete {
+    text-align: center;
+}

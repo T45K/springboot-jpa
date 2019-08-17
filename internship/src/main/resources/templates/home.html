@@ -2,8 +2,13 @@
 <title>Summer Short Internship 2019</title>
 <link rel="stylesheet" type="text/css" href="/css/table.css" th:href="@{/css/table.css}">
 <script type="text/javascript">
-    function onButtonClick() {
+    function goToTheForm() {
         window.location.href = './create'
+    }
+
+    function goToTheDeletePage(number) {
+        alert(number);
+        window.location.href = './delete'
     }
 </script>
 <body>
@@ -17,14 +22,20 @@
         <th class="number"><span style="color: #FFFFFF">No</span></th>
         <th class="title"><span style="color: #FFFFFF">Title</span></th>
         <th class="description"><span style="color: #FFFFFF">Description</span></th>
+        <th class="title"><span style="color: #FFFFFF">Delete</span></th>
     </tr>
     <tr th:each="todo:${todoList}">
         <td th:text="${todo.number}"></td>
         <td class="title" th:text="${todo.title}"></td>
         <td class="description" th:text="${todo.description}"></td>
+        <td class="delete">
+            <form method="post" action="/delete">
+                <input type="submit" th:value="${todo.number}" name="delBtn"/>
+            </form>
+        </td>
     </tr>
 </table>
 <br>
-<button id="btn" value="Click" onclick="onButtonClick()">Go to the form</button>
+<button id="btn" value="Click" onclick="goToTheForm()">Go to the form</button>
 </body>
 </html>
