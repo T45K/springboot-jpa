@@ -1,10 +1,5 @@
 <html lang="ja">
 <title>Summer Short Internship 2019</title>
-<script type="text/javascript">
-    function onButtonClick() {
-        window.location.href = '.'
-    }
-</script>
 <body>
 <h1>
     Todo Management System
@@ -13,6 +8,13 @@
 Success to register a todo task!
 
 <br><br>
-<button id="btn" value="Back" onclick="onButtonClick()">Back</button>
+<button id="btn">Back</button>
+<script type="text/javascript">
+    document.getElementById("btn").addEventListener("click", onButtonClick);
+
+    function onButtonClick() {
+        window.location.href = '.'
+    }
+</script>
 </body>
 </html>
