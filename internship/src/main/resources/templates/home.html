@@ -1,16 +1,6 @@
 <html xmlns:th="http://www.w3.org/1999/xhtml" lang="ja">
 <title>Summer Short Internship 2019</title>
 <link rel="stylesheet" type="text/css" href="/css/table.css" th:href="@{/css/table.css}">
-<script type="text/javascript">
-    function goToTheForm() {
-        window.location.href = './create'
-    }
-
-    function goToTheDeletePage(number) {
-        alert(number);
-        window.location.href = './delete'
-    }
-</script>
 <body>
 <h1>
     Todo Management System
@@ -38,6 +28,14 @@
     </tr>
 </table>
 <br>
-<button id="btn" value="Click" onclick="goToTheForm()">Go to the form</button>
+<button id="btn">Go to the form</button>
+<script type="text/javascript">
+    document.getElementById("btn").addEventListener("click", onButtonClick);
+
+    function onButtonClick() {
+        window.location.href = './create'
+    }
+</script>
+>>>>>>> master
 </body>
 </html>

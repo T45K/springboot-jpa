@@ -1,16 +1,18 @@
 <html lang="ja">
 <title>Summer Short Internship 2019</title>
-<script type="text/javascript">
-    function onButtonClick() {
-        window.location.href = '.'
-    }
-</script>
 <body>
 <h1>
     Error!
 </h1>
 Error found
 <br><br>
-<button id="btn" value="Back" onclick="onButtonClick()">Back</button>
+<button id="btn">Back</button>
+<script type="text/javascript">
+    document.getElementById("btn").addEventListener("click", onButtonClick);
+
+    function onButtonClick() {
+        window.location.href = '.'
+    }
+</script>
 </body>
 </html>
