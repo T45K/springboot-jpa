@@ -2,6 +2,7 @@
 <title>Summer Short Internship 2019</title>
 <link rel="stylesheet" type="text/css" href="/css/table.css" th:href="@{/css/table.css}">
 <body>
+
 <h1>
     Todo Management System
 </h1>
@@ -29,7 +30,15 @@
 </table>
 <br>
 <button id="btn">Go to the form</button>
-<script type="text/javascript">
+<script type="text/javascript" th:inline="javascript">
+    /*<![CDATA[*/
+    const list = /*[[${todoToBeAlertedList}]]*/ [];
+    list.forEach(todo => {
+        const message = "The deadline of " + todo.title + " is coming up soon!";
+        alert(message);
+    });
+    /*]]>*/
+
     document.getElementById("btn").addEventListener("click", onButtonClick);
 
     function onButtonClick() {
